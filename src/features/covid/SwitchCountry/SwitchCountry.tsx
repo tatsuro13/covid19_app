@@ -37,6 +37,7 @@ import { fetchAsyncGetCountry } from '../covidSlice';
     <FormControl sx={{width: '300px', margin: '20px'}}>
          <NativeSelect
          onChange={(e:React.ChangeEvent<HTMLSelectElement>) => dispatch(fetchAsyncGetCountry(e.target.value))}>
+             <option value="">Worldwide</option>
              {countries.map((country, i) => (
                <option key={i} value={country}>
                  {country}
